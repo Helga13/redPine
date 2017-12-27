@@ -1,0 +1,10 @@
+@include font-face('FiraSansBoldItalic', "../fonts/FiraSansBoldItalic" ,null, null, ttf eot woff svg);
+@include font-face('FiraSansExtraBoldItalic', "../fonts/FiraSansExtraBoldItalic" ,null, null, ttf eot woff svg);
+@include font-face('FiraSansExtraLightItalic', "../fonts/FiraSansExtraLightItalic" ,null, null, ttf eot woff svg);
+@include font-face('FiraSansItalic', "../fonts/FiraSansItalic" ,null, null, ttf eot woff svg);
+@include font-face('FiraSansLight', "../fonts/FiraSansLight" ,null, null, ttf eot woff svg);
+@include font-face('FiraSansLightItalic', "../fonts/FiraSansLightItalic" ,null, null, ttf eot woff svg);
+@include font-face('FiraSansSemiBoldItalic', "../fonts/FiraSansSemiBoldItalic" ,null, null, ttf eot woff svg);
+@include font-face('FiraSansMediumItalic', "../fonts/FiraSansMediumItalic" ,null, null, ttf eot woff svg);
+
+$red: #ff0000;
