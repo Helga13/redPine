@@ -270,6 +270,16 @@ strong{
   }
 }
 
+.burger_menu{
+  display: none;
+  visibility: hidden;
+}
+
+.icon_close{
+  display: none;
+  visibility: hidden;
+}
+
 /* breadcrumbs */
 
 .breadcrumbs{
@@ -449,7 +459,6 @@ footer{
 
 .footer_phones{
   float: right;
-  padding-left: 20px;
   a{
     color: #ff4343;
     font-family: 'FiraSansMediumItalic', $font-stack-helvetica;
@@ -790,6 +799,7 @@ main{
       box-shadow: inset 0px 1px 2px 0px rgba(51, 51, 51, 0.3);
       width: 6px;
       height: 7px;
+      padding: 0;
       border-radius: 50%;
       transition: background-color .3s ease;
       &:before{
@@ -812,7 +822,8 @@ main{
   padding: 0 32px 10px 32px;
   margin-top: -103px;
   position: relative;
-  width: 610px;
+  width: 100%;
+  max-width: 610px;
 }
 
 .adventages_item{
@@ -888,10 +899,10 @@ main{
     top: -24px;
   }
   .slick-next{
-    right: 15px;
+    right: 0px;
   }
   .slick-prev{
-    right: 64px;
+    right: 49px;
   }
 }
 
@@ -945,6 +956,10 @@ main{
     height: 460px;
     width: 100%;
   }
+  & + .h2{
+    padding-left: 15px;
+    overflow: hidden;
+  }
 }
 
 .product_item{
@@ -953,6 +968,9 @@ main{
   overflow: hidden;
   width: 25%;
   float: left;
+  &:nth-last-child(2){
+    padding-left: 0;
+  }
 }
 
 .link_btn{

@@ -16,6 +16,14 @@ $(document).ready(function () {
     arrows: true,
     infinite: true,
     autoplay: true,
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        dots: false
+      }
+    }
+  ]
   });
   
   $('.suppliers_slider .suppliers').slick({
@@ -26,21 +34,22 @@ $(document).ready(function () {
     autoplaySpeed: 4000,
     slidesToShow: 4,
     slidesToScroll: 4,
+    variableWidth: true,
      responsive: [
-//    {
-//      breakpoint: 1367,
-//      settings: {
-//        slidesToShow: 5,
-//        slidesToScroll: 5
-//      }
-//    },
-//    {
-//      breakpoint: 993,
-//      settings: {
-//        slidesToShow: 4,
-//        slidesToScroll: 4
-//      }
-//    },
+    {
+      breakpoint: 1121,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
 //    {
 //      breakpoint: 768,
 //      settings: {
@@ -61,6 +70,25 @@ $(document).ready(function () {
   // phone mask
   
   $("#phone").mask("+375 (99) 999 - 99 - 99");
+  
+  // burger_menu
+  
+  $('.burger_menu').click(function () {
+    $('.main_nav').fadeIn(300).addClass('opened');
+    $('body').css('overflow', 'hidden');  
+  });
+  $('.main_nav').click(function (e) {
+    $(this).fadeOut(200).removeClass('opened');
+    $('body').css('overflow', 'auto'); 
+  });
+  $('.icon_close').click(function (e) {
+    e.preventDefault();
+    $(this).parents('.main_nav').fadeOut(200).removeClass('opened');
+    $('body').css('overflow', 'auto'); 
+  });
+  $('.main_nav nav').click(function(e) {
+    e.stopPropagation();
+  });
   
   
 })
